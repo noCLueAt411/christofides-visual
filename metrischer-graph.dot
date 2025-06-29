@@ -1,0 +1,804 @@
+strict graph {
+
+
+	"16" [  weight=0 ];
+
+	"16" -- "17" [ label="48.8",  weight=0 ];
+
+	"16" -- "1" [ label="18.1",  weight=0 ];
+
+	"16" -- "3" [ label="26.1",  weight=0 ];
+
+	"16" -- "13" [ label="70.9",  weight=0 ];
+
+	"16" -- "14" [ label="84.7",  weight=0 ];
+
+	"16" -- "7" [ label="67.3",  weight=0 ];
+
+	"16" -- "9" [ label="30.6",  weight=0 ];
+
+	"16" -- "15" [ label="54.5",  weight=0 ];
+
+	"16" -- "19" [ label="43.1",  weight=0 ];
+
+	"16" -- "10" [ label="18.2",  weight=0 ];
+
+	"16" -- "12" [ label="85.5",  weight=0 ];
+
+	"16" -- "2" [ label="76.0",  weight=0 ];
+
+	"16" -- "8" [ label="42.1",  weight=0 ];
+
+	"16" [  weight=0 ];
+
+	"16" -- "4" [ label="26.4",  weight=0 ];
+
+	"16" -- "5" [ label="91.8",  weight=0 ];
+
+	"16" -- "11" [ label="76.6",  weight=0 ];
+
+	"16" -- "6" [ label="74.3",  weight=0 ];
+
+	"16" -- "18" [ label="34.7",  weight=0 ];
+
+	"4" [  weight=0 ];
+
+	"4" -- "12" [ label="93.5",  weight=0 ];
+
+	"4" -- "1" [ label="42.6",  weight=0 ];
+
+	"4" -- "15" [ label="45.2",  weight=0 ];
+
+	"4" -- "17" [ label="48.6",  weight=0 ];
+
+	"4" -- "14" [ label="91.8",  weight=0 ];
+
+	"4" -- "8" [ label="65.2",  weight=0 ];
+
+	"4" -- "10" [ label="8.3",  weight=0 ];
+
+	"4" -- "3" [ label="8.6",  weight=0 ];
+
+	"4" [  weight=0 ];
+
+	"4" -- "11" [ label="77.6",  weight=0 ];
+
+	"4" -- "2" [ label="82.3",  weight=0 ];
+
+	"4" -- "7" [ label="77.2",  weight=0 ];
+
+	"4" -- "18" [ label="39.5",  weight=0 ];
+
+	"4" -- "19" [ label="66.9",  weight=0 ];
+
+	"4" -- "13" [ label="79.5",  weight=0 ];
+
+	"4" -- "16" [ label="26.4",  weight=0 ];
+
+	"4" -- "5" [ label="90.2",  weight=0 ];
+
+	"4" -- "9" [ label="35.4",  weight=0 ];
+
+	"4" -- "6" [ label="56.5",  weight=0 ];
+
+	"6" [  weight=0 ];
+
+	"6" -- "3" [ label="64.5",  weight=0 ];
+
+	"6" -- "4" [ label="56.5",  weight=0 ];
+
+	"6" -- "16" [ label="74.3",  weight=0 ];
+
+	"6" -- "5" [ label="57.3",  weight=0 ];
+
+	"6" -- "10" [ label="62.2",  weight=0 ];
+
+	"6" -- "9" [ label="91.9",  weight=0 ];
+
+	"6" -- "14" [ label="77.2",  weight=0 ];
+
+	"6" -- "2" [ label="69.2",  weight=0 ];
+
+	"6" -- "13" [ label="72.3",  weight=0 ];
+
+	"6" -- "19" [ label="96.7",  weight=0 ];
+
+	"6" -- "15" [ label="26.6",  weight=0 ];
+
+	"6" -- "1" [ label="81.3",  weight=0 ];
+
+	"6" -- "7" [ label="73.6",  weight=0 ];
+
+	"6" -- "17" [ label="43.7",  weight=0 ];
+
+	"6" [  weight=0 ];
+
+	"6" -- "11" [ label="55.0",  weight=0 ];
+
+	"6" -- "18" [ label="52.6",  weight=0 ];
+
+	"6" -- "8" [ label="93.6",  weight=0 ];
+
+	"6" -- "12" [ label="80.3",  weight=0 ];
+
+	"8" [  weight=0 ];
+
+	"8" -- "15" [ label="67.4",  weight=0 ];
+
+	"8" -- "13" [ label="49.9",  weight=0 ];
+
+	"8" -- "5" [ label="83.3",  weight=0 ];
+
+	"8" -- "18" [ label="41.0",  weight=0 ];
+
+	"8" [  weight=0 ];
+
+	"8" -- "10" [ label="58.2",  weight=0 ];
+
+	"8" -- "17" [ label="51.9",  weight=0 ];
+
+	"8" -- "9" [ label="68.5",  weight=0 ];
+
+	"8" -- "19" [ label="3.5",  weight=0 ];
+
+	"8" -- "14" [ label="63.1",  weight=0 ];
+
+	"8" -- "2" [ label="57.7",  weight=0 ];
+
+	"8" -- "6" [ label="93.6",  weight=0 ];
+
+	"8" -- "11" [ label="67.1",  weight=0 ];
+
+	"8" -- "16" [ label="42.1",  weight=0 ];
+
+	"8" -- "4" [ label="65.2",  weight=0 ];
+
+	"8" -- "12" [ label="62.2",  weight=0 ];
+
+	"8" -- "3" [ label="67.4",  weight=0 ];
+
+	"8" -- "1" [ label="24.1",  weight=0 ];
+
+	"8" -- "7" [ label="45.1",  weight=0 ];
+
+	"19" [  weight=0 ];
+
+	"19" -- "7" [ label="48.3",  weight=0 ];
+
+	"19" -- "16" [ label="43.1",  weight=0 ];
+
+	"19" -- "17" [ label="55.3",  weight=0 ];
+
+	"19" -- "13" [ label="53.1",  weight=0 ];
+
+	"19" -- "9" [ label="68.5",  weight=0 ];
+
+	"19" -- "18" [ label="44.1",  weight=0 ];
+
+	"19" -- "4" [ label="66.9",  weight=0 ];
+
+	"19" -- "11" [ label="70.5",  weight=0 ];
+
+	"19" -- "1" [ label="25.0",  weight=0 ];
+
+	"19" -- "8" [ label="3.5",  weight=0 ];
+
+	"19" -- "12" [ label="65.2",  weight=0 ];
+
+	"19" -- "14" [ label="66.2",  weight=0 ];
+
+	"19" [  weight=0 ];
+
+	"19" -- "2" [ label="60.9",  weight=0 ];
+
+	"19" -- "15" [ label="70.6",  weight=0 ];
+
+	"19" -- "6" [ label="96.7",  weight=0 ];
+
+	"19" -- "5" [ label="86.7",  weight=0 ];
+
+	"19" -- "3" [ label="68.7",  weight=0 ];
+
+	"19" -- "10" [ label="59.7",  weight=0 ];
+
+	"7" [  weight=0 ];
+
+	"7" -- "8" [ label="45.1",  weight=0 ];
+
+	"7" -- "9" [ label="97.9",  weight=0 ];
+
+	"7" -- "12" [ label="18.5",  weight=0 ];
+
+	"7" -- "10" [ label="74.3",  weight=0 ];
+
+	"7" -- "16" [ label="67.3",  weight=0 ];
+
+	"7" -- "11" [ label="26.3",  weight=0 ];
+
+	"7" -- "2" [ label="12.8",  weight=0 ];
+
+	"7" -- "15" [ label="49.4",  weight=0 ];
+
+	"7" -- "19" [ label="48.3",  weight=0 ];
+
+	"7" -- "14" [ label="18.5",  weight=0 ];
+
+	"7" [  weight=0 ];
+
+	"7" -- "18" [ label="37.7",  weight=0 ];
+
+	"7" -- "3" [ label="83.7",  weight=0 ];
+
+	"7" -- "17" [ label="33.5",  weight=0 ];
+
+	"7" -- "6" [ label="73.6",  weight=0 ];
+
+	"7" -- "4" [ label="77.2",  weight=0 ];
+
+	"7" -- "13" [ label="4.9",  weight=0 ];
+
+	"7" -- "1" [ label="55.8",  weight=0 ];
+
+	"7" -- "5" [ label="40.7",  weight=0 ];
+
+	"12" [  weight=0 ];
+
+	"12" -- "4" [ label="93.5",  weight=0 ];
+
+	"12" -- "14" [ label="3.4",  weight=0 ];
+
+	"12" -- "8" [ label="62.2",  weight=0 ];
+
+	"12" -- "9" [ label="116.0",  weight=0 ];
+
+	"12" -- "18" [ label="54.2",  weight=0 ];
+
+	"12" -- "1" [ label="74.2",  weight=0 ];
+
+	"12" -- "19" [ label="65.2",  weight=0 ];
+
+	"12" -- "16" [ label="85.5",  weight=0 ];
+
+	"12" -- "11" [ label="25.8",  weight=0 ];
+
+	"12" -- "10" [ label="91.3",  weight=0 ];
+
+	"12" -- "15" [ label="59.6",  weight=0 ];
+
+	"12" -- "17" [ label="46.5",  weight=0 ];
+
+	"12" -- "6" [ label="80.3",  weight=0 ];
+
+	"12" -- "7" [ label="18.5",  weight=0 ];
+
+	"12" -- "3" [ label="100.5",  weight=0 ];
+
+	"12" -- "13" [ label="14.6",  weight=0 ];
+
+	"12" -- "2" [ label="11.8",  weight=0 ];
+
+	"12" -- "5" [ label="33.4",  weight=0 ];
+
+	"12" [  weight=0 ];
+
+	"11" [  weight=0 ];
+
+	"11" -- "18" [ label="42.0",  weight=0 ];
+
+	"11" -- "7" [ label="26.3",  weight=0 ];
+
+	"11" -- "15" [ label="37.1",  weight=0 ];
+
+	"11" -- "4" [ label="77.6",  weight=0 ];
+
+	"11" -- "16" [ label="76.6",  weight=0 ];
+
+	"11" -- "6" [ label="55.0",  weight=0 ];
+
+	"11" -- "17" [ label="29.2",  weight=0 ];
+
+	"11" -- "1" [ label="70.5",  weight=0 ];
+
+	"11" -- "9" [ label="105.7",  weight=0 ];
+
+	"11" -- "8" [ label="67.1",  weight=0 ];
+
+	"11" -- "19" [ label="70.5",  weight=0 ];
+
+	"11" [  weight=0 ];
+
+	"11" -- "2" [ label="16.2",  weight=0 ];
+
+	"11" -- "12" [ label="25.8",  weight=0 ];
+
+	"11" -- "14" [ label="22.5",  weight=0 ];
+
+	"11" -- "5" [ label="16.4",  weight=0 ];
+
+	"11" -- "13" [ label="22.5",  weight=0 ];
+
+	"11" -- "10" [ label="77.4",  weight=0 ];
+
+	"11" -- "3" [ label="85.5",  weight=0 ];
+
+	"13" [  weight=0 ];
+
+	"13" -- "3" [ label="86.3",  weight=0 ];
+
+	"13" -- "9" [ label="101.4",  weight=0 ];
+
+	"13" -- "16" [ label="70.9",  weight=0 ];
+
+	"13" -- "12" [ label="14.6",  weight=0 ];
+
+	"13" -- "1" [ label="60.0",  weight=0 ];
+
+	"13" -- "4" [ label="79.5",  weight=0 ];
+
+	"13" -- "5" [ label="36.3",  weight=0 ];
+
+	"13" -- "17" [ label="34.0",  weight=0 ];
+
+	"13" -- "18" [ label="40.0",  weight=0 ];
+
+	"13" -- "6" [ label="72.3",  weight=0 ];
+
+	"13" -- "14" [ label="14.1",  weight=0 ];
+
+	"13" [  weight=0 ];
+
+	"13" -- "2" [ label="8.1",  weight=0 ];
+
+	"13" -- "7" [ label="4.9",  weight=0 ];
+
+	"13" -- "10" [ label="77.0",  weight=0 ];
+
+	"13" -- "19" [ label="53.1",  weight=0 ];
+
+	"13" -- "15" [ label="49.0",  weight=0 ];
+
+	"13" -- "8" [ label="49.9",  weight=0 ];
+
+	"13" -- "11" [ label="22.5",  weight=0 ];
+
+	"18" [  weight=0 ];
+
+	"18" -- "14" [ label="52.8",  weight=0 ];
+
+	"18" -- "16" [ label="34.7",  weight=0 ];
+
+	"18" -- "1" [ label="32.2",  weight=0 ];
+
+	"18" -- "3" [ label="46.3",  weight=0 ];
+
+	"18" -- "13" [ label="40.0",  weight=0 ];
+
+	"18" -- "6" [ label="52.6",  weight=0 ];
+
+	"18" -- "15" [ label="26.7",  weight=0 ];
+
+	"18" -- "10" [ label="37.1",  weight=0 ];
+
+	"18" [  weight=0 ];
+
+	"18" -- "11" [ label="42.0",  weight=0 ];
+
+	"18" -- "19" [ label="44.1",  weight=0 ];
+
+	"18" -- "5" [ label="57.2",  weight=0 ];
+
+	"18" -- "12" [ label="54.2",  weight=0 ];
+
+	"18" -- "2" [ label="43.4",  weight=0 ];
+
+	"18" -- "9" [ label="63.9",  weight=0 ];
+
+	"18" -- "4" [ label="39.5",  weight=0 ];
+
+	"18" -- "17" [ label="14.6",  weight=0 ];
+
+	"18" -- "7" [ label="37.7",  weight=0 ];
+
+	"18" -- "8" [ label="41.0",  weight=0 ];
+
+	"3" [  weight=0 ];
+
+	"3" -- "15" [ label="53.7",  weight=0 ];
+
+	"3" -- "16" [ label="26.1",  weight=0 ];
+
+	"3" -- "7" [ label="83.7",  weight=0 ];
+
+	"3" -- "13" [ label="86.3",  weight=0 ];
+
+	"3" -- "9" [ label="27.6",  weight=0 ];
+
+	"3" -- "10" [ label="9.8",  weight=0 ];
+
+	"3" -- "1" [ label="43.8",  weight=0 ];
+
+	"3" -- "12" [ label="100.5",  weight=0 ];
+
+	"3" -- "5" [ label="98.5",  weight=0 ];
+
+	"3" -- "8" [ label="67.4",  weight=0 ];
+
+	"3" -- "14" [ label="99.0",  weight=0 ];
+
+	"3" -- "6" [ label="64.5",  weight=0 ];
+
+	"3" -- "18" [ label="46.3",  weight=0 ];
+
+	"3" [  weight=0 ];
+
+	"3" -- "2" [ label="89.5",  weight=0 ];
+
+	"3" -- "11" [ label="85.5",  weight=0 ];
+
+	"3" -- "19" [ label="68.7",  weight=0 ];
+
+	"3" -- "4" [ label="8.6",  weight=0 ];
+
+	"3" -- "17" [ label="56.4",  weight=0 ];
+
+	"5" [  weight=0 ];
+
+	"5" -- "3" [ label="98.5",  weight=0 ];
+
+	"5" -- "4" [ label="90.2",  weight=0 ];
+
+	"5" -- "9" [ label="120.2",  weight=0 ];
+
+	"5" -- "8" [ label="83.3",  weight=0 ];
+
+	"5" -- "6" [ label="57.3",  weight=0 ];
+
+	"5" -- "12" [ label="33.4",  weight=0 ];
+
+	"5" -- "14" [ label="30.1",  weight=0 ];
+
+	"5" -- "13" [ label="36.3",  weight=0 ];
+
+	"5" -- "10" [ label="91.0",  weight=0 ];
+
+	"5" -- "19" [ label="86.7",  weight=0 ];
+
+	"5" -- "1" [ label="86.7",  weight=0 ];
+
+	"5" [  weight=0 ];
+
+	"5" -- "2" [ label="28.5",  weight=0 ];
+
+	"5" -- "16" [ label="91.8",  weight=0 ];
+
+	"5" -- "18" [ label="57.2",  weight=0 ];
+
+	"5" -- "17" [ label="43.4",  weight=0 ];
+
+	"5" -- "7" [ label="40.7",  weight=0 ];
+
+	"5" -- "11" [ label="16.4",  weight=0 ];
+
+	"5" -- "15" [ label="46.5",  weight=0 ];
+
+	"0" [  weight=0 ];
+
+	"0" -- "1" [ label="31.5",  weight=0 ];
+
+	"0" -- "8" [ label="52.5",  weight=0 ];
+
+	"0" -- "3" [ label="20.1",  weight=0 ];
+
+	"0" -- "14" [ label="78.9",  weight=0 ];
+
+	"0" -- "4" [ label="14.0",  weight=0 ];
+
+	"0" -- "12" [ label="80.4",  weight=0 ];
+
+	"0" -- "13" [ label="66.2",  weight=0 ];
+
+	"0" -- "7" [ label="63.7",  weight=0 ];
+
+	"0" -- "10" [ label="11.2",  weight=0 ];
+
+	"0" -- "19" [ label="54.5",  weight=0 ];
+
+	"0" -- "15" [ label="37.8",  weight=0 ];
+
+	"0" -- "11" [ label="66.3",  weight=0 ];
+
+	"0" -- "6" [ label="55.3",  weight=0 ];
+
+	"0" -- "17" [ label="37.0",  weight=0 ];
+
+	"0" -- "2" [ label="69.5",  weight=0 ];
+
+	"0" -- "9" [ label="40.8",  weight=0 ];
+
+	"0" -- "18" [ label="26.2",  weight=0 ];
+
+	"0" -- "16" [ label="19.3",  weight=0 ];
+
+	"0" -- "5" [ label="80.0",  weight=0 ];
+
+	"1" [  weight=0 ];
+
+	"1" -- "11" [ label="70.5",  weight=0 ];
+
+	"1" -- "3" [ label="43.8",  weight=0 ];
+
+	"1" -- "9" [ label="45.6",  weight=0 ];
+
+	"1" -- "7" [ label="55.8",  weight=0 ];
+
+	"1" -- "14" [ label="74.1",  weight=0 ];
+
+	"1" [  weight=0 ];
+
+	"1" -- "19" [ label="25.0",  weight=0 ];
+
+	"1" -- "10" [ label="35.0",  weight=0 ];
+
+	"1" -- "18" [ label="32.2",  weight=0 ];
+
+	"1" -- "12" [ label="74.2",  weight=0 ];
+
+	"1" -- "5" [ label="86.7",  weight=0 ];
+
+	"1" -- "17" [ label="46.6",  weight=0 ];
+
+	"1" -- "15" [ label="57.6",  weight=0 ];
+
+	"1" -- "2" [ label="66.3",  weight=0 ];
+
+	"1" -- "8" [ label="24.1",  weight=0 ];
+
+	"1" -- "16" [ label="18.1",  weight=0 ];
+
+	"1" -- "4" [ label="42.6",  weight=0 ];
+
+	"1" -- "6" [ label="81.3",  weight=0 ];
+
+	"1" -- "13" [ label="60.0",  weight=0 ];
+
+	"15" [  weight=0 ];
+
+	"15" -- "10" [ label="47.8",  weight=0 ];
+
+	"15" -- "11" [ label="37.1",  weight=0 ];
+
+	"15" -- "18" [ label="26.7",  weight=0 ];
+
+	"15" -- "2" [ label="47.9",  weight=0 ];
+
+	"15" -- "14" [ label="57.0",  weight=0 ];
+
+	"15" -- "4" [ label="45.2",  weight=0 ];
+
+	"15" -- "5" [ label="46.5",  weight=0 ];
+
+	"15" -- "1" [ label="57.6",  weight=0 ];
+
+	"15" -- "16" [ label="54.5",  weight=0 ];
+
+	"15" -- "12" [ label="59.6",  weight=0 ];
+
+	"15" -- "8" [ label="67.4",  weight=0 ];
+
+	"15" -- "9" [ label="78.4",  weight=0 ];
+
+	"15" -- "17" [ label="17.3",  weight=0 ];
+
+	"15" -- "19" [ label="70.6",  weight=0 ];
+
+	"15" [  weight=0 ];
+
+	"15" -- "6" [ label="26.6",  weight=0 ];
+
+	"15" -- "7" [ label="49.4",  weight=0 ];
+
+	"15" -- "13" [ label="49.0",  weight=0 ];
+
+	"15" -- "3" [ label="53.7",  weight=0 ];
+
+	"14" [  weight=0 ];
+
+	"14" -- "9" [ label="115.2",  weight=0 ];
+
+	"14" -- "11" [ label="22.5",  weight=0 ];
+
+	"14" -- "12" [ label="3.4",  weight=0 ];
+
+	"14" -- "18" [ label="52.8",  weight=0 ];
+
+	"14" -- "19" [ label="66.2",  weight=0 ];
+
+	"14" -- "4" [ label="91.8",  weight=0 ];
+
+	"14" -- "6" [ label="77.2",  weight=0 ];
+
+	"14" -- "5" [ label="30.1",  weight=0 ];
+
+	"14" -- "8" [ label="63.1",  weight=0 ];
+
+	"14" -- "1" [ label="74.1",  weight=0 ];
+
+	"14" -- "13" [ label="14.1",  weight=0 ];
+
+	"14" -- "3" [ label="99.0",  weight=0 ];
+
+	"14" -- "15" [ label="57.0",  weight=0 ];
+
+	"14" -- "16" [ label="84.7",  weight=0 ];
+
+	"14" [  weight=0 ];
+
+	"14" -- "7" [ label="18.5",  weight=0 ];
+
+	"14" -- "2" [ label="9.6",  weight=0 ];
+
+	"14" -- "10" [ label="89.9",  weight=0 ];
+
+	"14" -- "17" [ label="44.4",  weight=0 ];
+
+	"17" [  weight=0 ];
+
+	"17" -- "8" [ label="51.9",  weight=0 ];
+
+	"17" -- "9" [ label="76.9",  weight=0 ];
+
+	"17" -- "14" [ label="44.4",  weight=0 ];
+
+	"17" -- "1" [ label="46.6",  weight=0 ];
+
+	"17" -- "3" [ label="56.4",  weight=0 ];
+
+	"17" -- "5" [ label="43.4",  weight=0 ];
+
+	"17" -- "12" [ label="46.5",  weight=0 ];
+
+	"17" -- "10" [ label="48.2",  weight=0 ];
+
+	"17" -- "19" [ label="55.3",  weight=0 ];
+
+	"17" -- "2" [ label="34.8",  weight=0 ];
+
+	"17" -- "4" [ label="48.6",  weight=0 ];
+
+	"17" -- "16" [ label="48.8",  weight=0 ];
+
+	"17" -- "6" [ label="43.7",  weight=0 ];
+
+	"17" [  weight=0 ];
+
+	"17" -- "7" [ label="33.5",  weight=0 ];
+
+	"17" -- "13" [ label="34.0",  weight=0 ];
+
+	"17" -- "11" [ label="29.2",  weight=0 ];
+
+	"17" -- "15" [ label="17.3",  weight=0 ];
+
+	"17" -- "18" [ label="14.6",  weight=0 ];
+
+	"2" [  weight=0 ];
+
+	"2" -- "10" [ label="80.5",  weight=0 ];
+
+	"2" -- "1" [ label="66.3",  weight=0 ];
+
+	"2" -- "14" [ label="9.6",  weight=0 ];
+
+	"2" -- "11" [ label="16.2",  weight=0 ];
+
+	"2" -- "4" [ label="82.3",  weight=0 ];
+
+	"2" -- "13" [ label="8.1",  weight=0 ];
+
+	"2" -- "8" [ label="57.7",  weight=0 ];
+
+	"2" -- "9" [ label="106.3",  weight=0 ];
+
+	"2" [  weight=0 ];
+
+	"2" -- "18" [ label="43.4",  weight=0 ];
+
+	"2" -- "16" [ label="76.0",  weight=0 ];
+
+	"2" -- "17" [ label="34.8",  weight=0 ];
+
+	"2" -- "6" [ label="69.2",  weight=0 ];
+
+	"2" -- "7" [ label="12.8",  weight=0 ];
+
+	"2" -- "19" [ label="60.9",  weight=0 ];
+
+	"2" -- "15" [ label="47.9",  weight=0 ];
+
+	"2" -- "5" [ label="28.5",  weight=0 ];
+
+	"2" -- "12" [ label="11.8",  weight=0 ];
+
+	"2" -- "3" [ label="89.5",  weight=0 ];
+
+	"9" [  weight=0 ];
+
+	"9" -- "19" [ label="68.5",  weight=0 ];
+
+	"9" -- "8" [ label="68.5",  weight=0 ];
+
+	"9" [  weight=0 ];
+
+	"9" -- "6" [ label="91.9",  weight=0 ];
+
+	"9" -- "17" [ label="76.9",  weight=0 ];
+
+	"9" -- "12" [ label="116.0",  weight=0 ];
+
+	"9" -- "16" [ label="30.6",  weight=0 ];
+
+	"9" -- "2" [ label="106.3",  weight=0 ];
+
+	"9" -- "15" [ label="78.4",  weight=0 ];
+
+	"9" -- "3" [ label="27.6",  weight=0 ];
+
+	"9" -- "5" [ label="120.2",  weight=0 ];
+
+	"9" -- "1" [ label="45.6",  weight=0 ];
+
+	"9" -- "7" [ label="97.9",  weight=0 ];
+
+	"9" -- "10" [ label="30.7",  weight=0 ];
+
+	"9" -- "13" [ label="101.4",  weight=0 ];
+
+	"9" -- "14" [ label="115.2",  weight=0 ];
+
+	"9" -- "4" [ label="35.4",  weight=0 ];
+
+	"9" -- "11" [ label="105.7",  weight=0 ];
+
+	"9" -- "18" [ label="63.9",  weight=0 ];
+
+	"10" [  weight=0 ];
+
+	"10" -- "16" [ label="18.2",  weight=0 ];
+
+	"10" -- "15" [ label="47.8",  weight=0 ];
+
+	"10" -- "4" [ label="8.3",  weight=0 ];
+
+	"10" -- "6" [ label="62.2",  weight=0 ];
+
+	"10" [  weight=0 ];
+
+	"10" -- "19" [ label="59.7",  weight=0 ];
+
+	"10" -- "18" [ label="37.1",  weight=0 ];
+
+	"10" -- "1" [ label="35.0",  weight=0 ];
+
+	"10" -- "2" [ label="80.5",  weight=0 ];
+
+	"10" -- "12" [ label="91.3",  weight=0 ];
+
+	"10" -- "5" [ label="91.0",  weight=0 ];
+
+	"10" -- "8" [ label="58.2",  weight=0 ];
+
+	"10" -- "11" [ label="77.4",  weight=0 ];
+
+	"10" -- "14" [ label="89.9",  weight=0 ];
+
+	"10" -- "3" [ label="9.8",  weight=0 ];
+
+	"10" -- "9" [ label="30.7",  weight=0 ];
+
+	"10" -- "13" [ label="77.0",  weight=0 ];
+
+	"10" -- "17" [ label="48.2",  weight=0 ];
+
+	"10" -- "7" [ label="74.3",  weight=0 ];
+
+}
