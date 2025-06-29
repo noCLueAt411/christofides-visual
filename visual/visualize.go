@@ -100,7 +100,7 @@ func (g *Game) Draw(screen *ebiten.Image) {
 
 	// Knoten
 	for i, p := range g.Points {
-		vector.StrokeLine(screen, p.x-3, p.y-3, 6, 6, 1, color.RGBA{0, 100, 255, 255}, false)
+		//vector.StrokeLine(screen, p.x-3, p.y-3, 6, 6, 1, color.RGBA{0, 100, 255, 255}, false)
 		ebitenutil.DebugPrintAt(screen, string(rune('A'+i)), int(p.x+5), int(p.y+5))
 	}
 

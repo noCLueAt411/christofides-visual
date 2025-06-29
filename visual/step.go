@@ -6,7 +6,6 @@ const (
 	Idle Step = iota
 	MST
 	Matching
-	Euler
 	Tour
 	Done
 )

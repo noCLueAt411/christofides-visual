@@ -14,10 +14,10 @@ func main() {
 	//Make it possible to solve it with 2
 	//Make it posible to show solution with 3
 
-	game := visual.NewGame(6)
+	game := visual.NewGame(35)
 
 	ebiten.SetWindowTitle("Christofides Visualizer")
-	ebiten.SetWindowSize(800, 600)
+	ebiten.SetWindowSize(1000, 1000)
 
 	if err := ebiten.RunGame(game); err != nil {
 		log.Fatal(err)
