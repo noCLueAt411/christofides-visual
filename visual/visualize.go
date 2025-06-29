@@ -100,12 +100,18 @@ func (g *Game) Draw(screen *ebiten.Image) {
 
 	// Knoten
 	for i, p := range g.Points {
-		//vector.StrokeLine(screen, p.x-3, p.y-3, 6, 6, 1, color.RGBA{0, 100, 255, 255}, false)
+		vector.DrawFilledCircle(screen, p.x, p.y, 3, color.RGBA{0, 100, 255, 255}, false)
 		ebitenutil.DebugPrintAt(screen, string(rune('A'+i)), int(p.x+5), int(p.y+5))
 	}
 
-	// Text
-	ebitenutil.DebugPrint(screen, "→: Nächster Schritt | Schritte: Kanten, MST, Matching, Tour")
+	steps := []string{"MST", "Matching", "Tour"}
+	for i, s := range steps {
+		prefix := "   "
+		if Step(i+1) == g.Step {
+			prefix = "→ "
+		}
+		ebitenutil.DebugPrintAt(screen, prefix+s, 10, 20+i*15)
+	}
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
