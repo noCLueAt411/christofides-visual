@@ -5,7 +5,6 @@ import (
 	buildgraph "christofides-algo/build_graph"
 	"christofides-algo/model"
 	"image/color"
-	"math/rand"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
@@ -13,34 +12,22 @@ import (
 )
 
 type Game struct {
-	Graph      model.Graph
-	Points     []point
-	Step       Step
-	MST        []model.Edge
-	Matching   []model.Edge
-	Tour       []int
-	KeyPressed bool
+	Graph         model.Graph
+	Width, Height int
+	Step          Step
+	MST           []model.Edge
+	Matching      []model.Edge
+	Tour          []int
+	KeyPressed    bool
 }
 
-type point struct {
-	x, y float32
-}
-
-func NewGame(n int) *Game {
-	g := buildgraph.BuildNewGraph(n)
-
-	// random coords for display (same size as node count)
-	points := make([]point, n)
-	for i := 0; i < n; i++ {
-		points[i] = point{
-			x: rand.Float32()*600 + 50,
-			y: rand.Float32()*400 + 50,
-		}
-	}
+func NewGame(n int, windowWidth, windowHeight float32) *Game {
+	g := buildgraph.BuildNewGraph(n, windowWidth, windowHeight)
 
 	return &Game{
 		Graph:  g,
-		Points: points,
+		Width:  int(windowWidth),
+		Height: int(windowHeight),
 		Step:   Idle,
 	}
 }
@@ -54,7 +41,7 @@ func (g *Game) Update() error {
 		case MST:
 			g.MST = algorithm.BuildMST(g.Graph)
 		case Matching:
-			odds := algorithm.FindOddDegreeNodes(g.MST, g.Graph.Nodes)
+			odds := algorithm.FindOddDegreeNodes(g.MST, g.Graph.Points)
 			g.Matching = algorithm.MinPerfectMatching(odds, g.Graph)
 		case Tour:
 			t, _ := algorithm.Christofides(g.Graph)
@@ -68,42 +55,47 @@ func (g *Game) Update() error {
 }
 
 func (g *Game) Draw(screen *ebiten.Image) {
-	// Kanten
-	for i := 0; i < g.Graph.Nodes; i++ {
-		for j := i + 1; j < g.Graph.Nodes; j++ {
-			vector.StrokeLine(screen, g.Points[i].x, g.Points[i].y, g.Points[j].x, g.Points[j].y, 1, color.RGBA{80, 80, 80, 255}, false)
+	// Alle Kanten (nur im Idle-Zustand)
+	if g.Step == Idle {
+		for i := 0; i < g.Graph.Nodes; i++ {
+			for j := i + 1; j < g.Graph.Nodes; j++ {
+				p1 := g.Graph.Points[i]
+				p2 := g.Graph.Points[j]
+				vector.StrokeLine(screen, p1.X, p1.Y, p2.X, p2.Y, 1, color.RGBA{80, 80, 80, 255}, false)
+			}
 		}
 	}
 
 	// MST-Kanten
-	if g.Step >= MST {
+	if g.Step == MST || g.Step == Matching {
 		for _, e := range g.MST {
-			vector.StrokeLine(screen, g.Points[e.From].x, g.Points[e.From].y, g.Points[e.To].x, g.Points[e.To].y, 1, color.RGBA{0, 200, 0, 255}, false)
+			vector.StrokeLine(screen, e.From.X, e.From.Y, e.To.X, e.To.Y, 1, color.RGBA{0, 200, 0, 255}, false)
 		}
 	}
 
 	// Matching-Kanten
-	if g.Step >= Matching {
+	if g.Step == Matching {
 		for _, e := range g.Matching {
-			vector.StrokeLine(screen, g.Points[e.From].x, g.Points[e.From].y, g.Points[e.To].x, g.Points[e.To].y, 1, color.RGBA{200, 0, 200, 255}, false)
+			vector.StrokeLine(screen, e.From.X, e.From.Y, e.To.X, e.To.Y, 1, color.RGBA{200, 0, 200, 255}, false)
 		}
 	}
 
 	// Tour
 	if g.Step >= Tour {
 		for i := 0; i < len(g.Tour)-1; i++ {
-			from := g.Tour[i]
-			to := g.Tour[i+1]
-			vector.StrokeLine(screen, g.Points[from].x, g.Points[from].y, g.Points[to].x, g.Points[to].y, 1, color.RGBA{0, 100, 255, 255}, false)
+			from := g.Graph.Points[g.Tour[i]]
+			to := g.Graph.Points[g.Tour[i+1]]
+			vector.StrokeLine(screen, from.X, from.Y, to.X, to.Y, 1, color.RGBA{0, 100, 255, 255}, false)
 		}
 	}
 
 	// Knoten
-	for i, p := range g.Points {
-		vector.DrawFilledCircle(screen, p.x, p.y, 3, color.RGBA{0, 100, 255, 255}, false)
-		ebitenutil.DebugPrintAt(screen, string(rune('A'+i)), int(p.x+5), int(p.y+5))
+	for i, p := range g.Graph.Points {
+		vector.DrawFilledCircle(screen, p.X, p.Y, 3, color.RGBA{0, 100, 255, 255}, false)
+		ebitenutil.DebugPrintAt(screen, string(rune('A'+i)), int(p.X+5), int(p.Y+5))
 	}
 
+	// Schrittanzeige
 	steps := []string{"MST", "Matching", "Tour"}
 	for i, s := range steps {
 		prefix := "   "
@@ -115,5 +107,5 @@ func (g *Game) Draw(screen *ebiten.Image) {
 }
 
 func (g *Game) Layout(outsideWidth, outsideHeight int) (int, int) {
-	return 800, 600
+	return g.Width, g.Height
 }

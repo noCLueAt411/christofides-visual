@@ -5,15 +5,16 @@ import (
 	"math"
 )
 
-func FindOddDegreeNodes(mst []model.Edge, nodeCount int) []int {
-	degree := make([]int, nodeCount)
+func FindOddDegreeNodes(mst []model.Edge, points []model.Point) []int {
+	degree := make(map[model.Point]int)
 	for _, e := range mst {
 		degree[e.From]++
 		degree[e.To]++
 	}
+
 	odds := []int{}
-	for i, d := range degree {
-		if d%2 == 1 {
+	for i, p := range points {
+		if degree[p]%2 == 1 {
 			odds = append(odds, i)
 		}
 	}
@@ -46,9 +47,13 @@ func bestMatching(nodes []int, g model.Graph) []model.Edge {
 		for i := 1; i < len(remaining); i++ {
 			b := remaining[i]
 			w := g.Edges[a][b]
-			newPair := model.Edge{From: a, To: b, Weight: w}
 
-			// remove a & b from remaining
+			newPair := model.Edge{
+				From:   g.Points[a],
+				To:     g.Points[b],
+				Weight: w,
+			}
+
 			newRemaining := append([]int{}, remaining[1:i]...)
 			newRemaining = append(newRemaining, remaining[i+1:]...)
 			helper(newRemaining, append(current, newPair), cost+w)
@@ -58,23 +63,30 @@ func bestMatching(nodes []int, g model.Graph) []model.Edge {
 	return best
 }
 
-// Merge MST + Matching → Multigraph (als Adjazenzliste)
-func MergeEdges(mst, matching []model.Edge, nodeCount int) map[int][]int {
+// Multigraph als Adjazenzliste (mit Indices)
+func MergeEdges(mst, matching []model.Edge, g model.Graph) map[int][]int {
 	graph := make(map[int][]int)
-	addEdge := func(from, to int) {
+	pointToIndex := make(map[model.Point]int)
+	for i, p := range g.Points {
+		pointToIndex[p] = i
+	}
+
+	add := func(e model.Edge) {
+		from := pointToIndex[e.From]
+		to := pointToIndex[e.To]
 		graph[from] = append(graph[from], to)
 		graph[to] = append(graph[to], from)
 	}
+
 	for _, e := range mst {
-		addEdge(e.From, e.To)
+		add(e)
 	}
 	for _, e := range matching {
-		addEdge(e.From, e.To)
+		add(e)
 	}
 	return graph
 }
 
-// Hierholzer-Algorithmus für Eulerkreis
 func EulerTour(graph map[int][]int, start int) []int {
 	var tour []int
 	var dfs func(int)
@@ -85,7 +97,7 @@ func EulerTour(graph map[int][]int, start int) []int {
 			v := graph[u][0]
 			graph[u] = graph[u][1:]
 
-			// remove reverse edge
+			// Entferne Rückkante
 			for i, w := range graph[v] {
 				if w == u {
 					graph[v] = append(graph[v][:i], graph[v][i+1:]...)
@@ -106,14 +118,6 @@ func EulerTour(graph map[int][]int, start int) []int {
 	return reverse(tour)
 }
 
-func reverse(s []int) []int {
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		s[i], s[j] = s[j], s[i]
-	}
-	return s
-}
-
-// Shortcut Euler-Tour → Hamiltonkreis
 func Shortcut(tour []int) []int {
 	seen := make(map[int]bool)
 	ham := []int{}
@@ -123,19 +127,17 @@ func Shortcut(tour []int) []int {
 			seen[node] = true
 		}
 	}
-	// Rückkehr zum Start
 	if len(ham) > 0 {
 		ham = append(ham, ham[0])
 	}
 	return ham
 }
 
-// Christofides kombiniert alle Schritte
 func Christofides(g model.Graph) ([]int, float32) {
-	mst := BuildMST(g)
-	odd := FindOddDegreeNodes(mst, g.Nodes)
+	mst := BuildMST(g) // muss angepasst sein: gibt []model.Edge mit Point zurück
+	odd := FindOddDegreeNodes(mst, g.Points)
 	matching := MinPerfectMatching(odd, g)
-	multigraph := MergeEdges(mst, matching, g.Nodes)
+	multigraph := MergeEdges(mst, matching, g)
 	euler := EulerTour(multigraph, 0)
 	tour := Shortcut(euler)
 	cost := computeTourCost(tour, g)
@@ -143,7 +145,7 @@ func Christofides(g model.Graph) ([]int, float32) {
 }
 
 func computeTourCost(tour []int, g model.Graph) float32 {
-	var total float32 = 0
+	var total float32
 	for i := 0; i < len(tour)-1; i++ {
 		total += g.Edges[tour[i]][tour[i+1]]
 	}
@@ -161,4 +163,11 @@ func max(a, b int) int {
 		return a
 	}
 	return b
+}
+
+func reverse(s []int) []int {
+	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
+		s[i], s[j] = s[j], s[i]
+	}
+	return s
 }

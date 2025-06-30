@@ -11,19 +11,19 @@ import (
 	"github.com/dominikbraun/graph/draw"
 )
 
-type point struct {
-	x, y float64
-}
-
 // BuildNewGraph erzeugt einen vollständigen, symmetrischen, metrischen Graph
 // und gibt ihn als model.Graph zurück
-func BuildNewGraph(numberOfNodes int) model.Graph {
-	points := make([]point, numberOfNodes)
+func BuildNewGraph(numberOfNodes int, windowWidth float32, windowHeight float32) model.Graph {
+
+	const margin float32 = 10
+
+	points := make([]model.Point, numberOfNodes)
 	for i := 0; i < numberOfNodes; i++ {
-		points[i] = point{
-			x: rand.Float64() * 100,
-			y: rand.Float64() * 100,
+		points[i] = model.Point{
+			X: float32(rand.Float32()*(windowWidth-2*margin) + margin),
+			Y: float32(rand.Float32()*(windowHeight-2*margin) + margin),
 		}
+
 	}
 
 	edges64 := make([][]float64, numberOfNodes)
@@ -58,8 +58,9 @@ func BuildNewGraph(numberOfNodes int) model.Graph {
 	}
 
 	return model.Graph{
-		Nodes: numberOfNodes,
-		Edges: edges,
+		Nodes:  numberOfNodes,
+		Edges:  edges,
+		Points: points,
 	}
 }
 
@@ -100,8 +101,8 @@ func SaveModelGraphAsDOT(g model.Graph, filename string) error {
 	return nil
 }
 
-func euclideanDistance(p1, p2 point) float64 {
-	dx := p1.x - p2.x
-	dy := p1.y - p2.y
+func euclideanDistance(p1, p2 model.Point) float64 {
+	dx := float64(p1.X - p2.X)
+	dy := float64(p1.Y - p2.Y)
 	return math.Sqrt(dx*dx + dy*dy)
 }
